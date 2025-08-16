@@ -36,7 +36,7 @@ export default function Home() {
             </AnimateIn>
             <AnimateIn variant="fadeUp" delay={0.4}>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-xl mb-8">
-                Full Stack Developer. Contact me below. Currently building{" "}
+                Full Stack Developer. Contact me below.
               </p>
             </AnimateIn>
 

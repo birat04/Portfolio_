@@ -10,9 +10,13 @@ import Nodejs from "@/components/icons/Nodejs";
 import Postgres from "@/components/icons/Postgres";
 import ReactIcon from "@/components/icons/React";
 import TailwindCSS from "@/components/icons/Tailwind";
-import Trpc from "@/components/icons/Trpc";
 import TypeScript from "@/components/icons/Typescript";
 import Vercel from "@/components/icons/Vercel";
+import Vuejs from "@/components/icons/Vuejs";
+import Html from "@/components/icons/Html";
+import Css from "@/components/icons/Css";
+import Javascript from "@/components/icons/Javascript";
+import Trpc from "@/components/icons/Trpc";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { track } from "@vercel/analytics";
@@ -26,33 +30,13 @@ export default function Home() {
           <section className="mb-6">
             <AnimateIn variant="fadeUp" delay={0.2}>
               <h1 className="text-xl font-medium tracking-tight mb-4 flex items-baseline justify-between">
-                <span>Hey, I&apos;m Ahmet</span>
+                <span>Hey, I&apos;m Birat</span>
                 <ThemeToggle />
               </h1>
             </AnimateIn>
             <AnimateIn variant="fadeUp" delay={0.4}>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 max-w-xl mb-8">
-                Software Engineer from London. Contact me below. Currently building{" "}
-                <a
-                  href="https://0.email"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-zinc-900 dark:text-zinc-100 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-                  onClick={() => track("zero_email_clicked")}
-                >
-                  Zero
-                </a>{" "}
-                and{" "}
-                <a
-                  href="https://oss.now"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-zinc-900 dark:text-zinc-100 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-                  onClick={() => track("oss.now_clicked")}
-                >
-                  oss.now
-                </a>
-                .
+                Full Stack Developer. Contact me below. Currently building{" "}
               </p>
             </AnimateIn>
 
@@ -127,17 +111,7 @@ export default function Home() {
                                     GitHub <ExternalLink className="w-3 h-3" />
                                   </a>
                                 ) : null}
-                                {project.link ? (
-                                  <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-1 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
-                                    onClick={() => track(`${project.title}_clicked`)}
-                                  >
-                                    View <ExternalLink className="w-3 h-3" />
-                                  </a>
-                                ) : null}
+
                               </div>
                             </div>
                             <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-2">{project.description}</p>
@@ -234,7 +208,7 @@ export default function Home() {
 
       <AnimateIn variant="fadeUp" delay={0.8}>
         <footer className="pt-4 text-xs text-zinc-400 dark:text-zinc-500 flex justify-between items-center">
-          <div>ahmet.studio</div>
+          <div>birat.studio</div>
           <div>Built with Next.js</div>
         </footer>
       </AnimateIn>
@@ -244,97 +218,45 @@ export default function Home() {
 
 const projects = [
   {
-    title: "oss.now",
-    description: "A place to share your open source projects and find new ones.",
-    link: "https://oss.now",
-    github: "https://github.com/ahmetskilinc/ossdotnow",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI", "Postgres", "DrizzleORM", "Bun", "tRPC", "Vercel"],
+    title: "Brainly",
+    description: "A personal knowledge management system where users can add and organize content from multiple sources in one place.",
+    github: "https://github.com/birat04/Brainly",
+    technologies: ["Node.js", "Express.js", "TypeScript", "PostgreSQL", "React"],
   },
   {
-    title: "UI Registry",
-    description: "A simple UI registry for components and blocks using the shadcn api.",
-    link: "https://l.ahmet.studio/ui",
-    github: "https://l.ahmet.studio/gh",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Shadcn UI"],
+    title: "ZynkDrive",
+    description: "A cloud-based file storage and sharing platform with real-time synchronization, secure file access, and collaboration features.",
+    
+    github: "https://github.com/birat04/ZynkDrive",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "MongoDB", "Cloud Storage"],
   },
   {
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform with product management, cart functionality, and payment processing.",
-    link: "https://payload-ecommerce-app.vercel.app/",
-    github: "https://github.com/ahmetskilinc/payload-ecommerce",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Payload CMS", "Stripe"],
-  },
-  // {
-  //   title: "Portfolio Website",
-  //   description: "A minimalist portfolio website showcasing projects and skills with a clean, responsive design.",
-  //   link: "https://dub.sh/ahmet/",
-  //   github: "https://github.com/ahmetskilinc/portfolio-new-new-new-new",
-  //   technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
-  // },
-  // {
-  //   title: "Work Hours Tracker - web",
-  //   description: "A collaborative task management web application with real-time updates and team functionality.",
-  //   link: "https://work-hours-tracker-chi.vercel.app/",
-  //   github: "https://github.com/ahmetskilinc/work-hours-web",
-  //   technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Web Sockets", "Supabase"],
-  // },
-  // {
-  //   title: "Work Hours Tracker - mobile",
-  //   description: "A collaborative task management mobile application with real-time updates and team functionality.",
-  //   github: "https://github.com/ahmetskilinc/work-hours-app",
-  //   technologies: ["Expo", "React Native", "TypeScript", "Web Sockets", "Supabase"],
-  // },
-  {
-    title: "Payload CMS Appointment Scheduling Plugin",
-    description: "A plugin for Payload CMS that allows users to schedule appointments.",
-    github: "https://github.com/ahmetskilinc/payload-appointments-plugin",
-    technologies: ["Next.js", "TypeScript", "Payload CMS"],
+    title: "InteliBridge",
+    description: "An AI-driven automation platform that integrates multiple applications to optimize workflows, reduce manual effort, and enhance efficiency with predictive analytics.",
+    
+    github: "https://github.com/birat04/InteliBridge",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "AI/ML APIs", "Workflow Automation"],
   },
   {
-    title: "Payload CMS Media Grid View Plugin",
-    description: "A plugin for Payload CMS that allows users to view media in a grid view.",
-    github: "https://github.com/ahmetskilinc/payload-media-grid-plugin",
-    technologies: ["Next.js", "TypeScript", "Payload CMS"],
+    title: "Subscription-tracking-api",
+    description: "A full backend api to manage and track recurring subscriptions with reminders, spending analytics, and categorization for better financial control.",
+    
+    github: "https://github.com/birat04/Subscription-tracking-api",
+    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Node.js", "Express.js", "PostgreSQL"],
   },
+
+  
 ];
 
 const experience = [
   {
-    role: "Software Engineer",
-    company: "Zero Email Inc. (US, remote)",
-    period: "Feb 2025 - Present",
-    description:
-      "Software engineer responsible for core features and performance optimisations for an innovative AI-powered email client, focusing on intelligent email processing and real-time collaboration.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "Google APIs"],
+    role: "MERN Stack Developer Intern",
+    company: "Codtech IT Solutions",
+    period: "Mar 2025 - May 2025",
+    description: "Completed a 2-month internship focused on MERN stack web development. Built projects including a landing page, weather app, personal portfolio, and backend API, gaining hands-on experience in full-stack development.",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Tailwind CSS", "GitHub", "Postman"],
   },
-  {
-    role: "Freelance Developer",
-    period: "Mar 2024 - May 2025",
-    description:
-      "Delivering custom web solutions for diverse clients, specialising in e-commerce platforms, content management systems, and business automation tools.",
-    technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Postgres", "MongoDB", "PayloadCMS", "Google APIs"],
-  },
-  {
-    role: "Front End Developer",
-    company: "Executives Place",
-    period: "Oct 2023 - Feb 2024",
-    description: "Developed and maintained multiple features for the SaaS product, from performance improvements to new features.",
-    technologies: ["Vue.js", "Node.js", "Laravel", "SQL"],
-  },
-  {
-    role: "Full Stack Developer",
-    company: "XLN Telecom (Daisy Comms)",
-    period: "Nov 2020 - Aug 2023",
-    description: "Developed and maintained the company brochure site to guide and increase sales.",
-    technologies: ["Vue.js", "Nuxt.js", "JavaScript", "SQL", "MongoDB", "C#", "ASP.NET", "WordPress"],
-  },
-  // {
-  //   role: "Junior Web Developer",
-  //   company: "Absowebly",
-  //   period: "Jul 2018 - Sep 2018",
-  //   description: "Developing and maintaining client websites with a proprietary CMS.",
-  //   technologies: ["PHP", "HTML", "CSS", "JavaScript", "Sass"],
-  // },
+  
 ];
 
 const tools = {
@@ -347,64 +269,40 @@ const tools = {
       Logo: (props: React.SVGProps<SVGSVGElement>) => <Nextjs {...props} />,
       title: "NextJS",
     },
-    // {
-    //   Logo: (props: React.SVGProps<SVGSVGElement>) => <ReactRouter {...props} />,
-    //   title: "React Router",
-    // },
-    // {
-    //   Logo: (props: React.SVGProps<SVGSVGElement>) => <Vue {...props} />,
-    //   title: "VueJS",
-    // },
-    // {
-    //   Logo: (props: React.SVGProps<SVGSVGElement>) => <Nuxt {...props} />,
-    //   title: "NuxtJS",
-    // },
-    // {
-    //   Logo: (props: React.SVGProps<SVGSVGElement>) => <Html {...props} />,
-    //   title: "HTML",
-    // },
-    // {
-    //   Logo: (props: React.SVGProps<SVGSVGElement>) => <Css {...props} />,
-    //   title: "CSS",
-    // },
-    // {
-    //   Logo: (props: React.SVGProps<SVGSVGElement>) => <JavaScript {...props} />,
-    //   title: "Javascript",
-    // },
+    {
+      Logo: (props: React.SVGProps<SVGSVGElement>) => <Vuejs {...props} />,
+      title: "VueJS",
+    },
+    {
+      Logo: (props: React.SVGProps<SVGSVGElement>) => <Html {...props} />,
+      title: "HTML",
+    },
+    {
+      Logo: (props: React.SVGProps<SVGSVGElement>) => <Css {...props} />,
+      title: "CSS",
+    },
+    {
+      Logo: (props: React.SVGProps<SVGSVGElement>) => <Javascript {...props} />,
+      title: "Javascript",
+    },
     {
       Logo: (props: React.SVGProps<SVGSVGElement>) => <TypeScript {...props} />,
       title: "Typescript",
     },
-    // {
-    //   Logo: (props: React.SVGProps<SVGSVGElement>) => <Sass {...props} />,
-    //   title: "Sass",
-    // },
     {
       Logo: (props: React.SVGProps<SVGSVGElement>) => <TailwindCSS {...props} />,
       title: "TailwindCSS",
     },
   ],
-  backend_and_infrastructure: [
+    backend_and_infrastructure: [
     {
       Logo: (props: React.SVGProps<SVGSVGElement>) => <Trpc {...props} />,
       title: "TRPC",
     },
-    // {
-    //   Logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/googlecloud/googlecloud-original.svg",
-    //   title: "Google Cloud",
-    // },
-    // {
-    //   Logo: (props: React.SVGProps<SVGSVGElement>) => <AmazonWebServices {...props} />,
-    //   title: "AWS",
-    // },
-    // {
-    //   Logo: (props: React.SVGProps<SVGSVGElement>) => <Cloudflare {...props} />,
-    //   title: "Cloudflare",
-    // },
     {
       Logo: (props: React.SVGProps<SVGSVGElement>) => <Vercel className="fill-black dark:fill-white" {...props} />,
       title: "Vercel",
-    },
+      },
     {
       Logo: (props: React.SVGProps<SVGSVGElement>) => <DrizzleORM {...props} />,
       title: "DrizzleORM",

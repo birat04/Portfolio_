@@ -21,22 +21,7 @@ export default function Links() {
           </section>
         </AnimateIn>
 
-        <AnimateIn variant="fadeUp" delay={0.4}>
-          <div className="flex flex-col gap-2 mb-8">
-            <div className="group">
-              <Link
-                href="https://cal.link/ahmet"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-between text-lg hover:translate-x-1 transition-all duration-300 ease-out"
-                onClick={() => track(`cal_link_clicked`)}
-              >
-                <span>Book a call</span>
-                <ArrowUpRight />
-              </Link>
-            </div>
-          </div>
-        </AnimateIn>
+        
 
         <AnimateIn variant="fadeUp" delay={0.4}>
           <div className="flex flex-col gap-2">
@@ -79,7 +64,7 @@ export default function Links() {
 
       <AnimateIn variant="fadeUp" delay={0.8} className="">
         <footer className="pt-4 text-xs text-zinc-400 dark:text-zinc-500 flex justify-between items-center">
-          <div>ahmet.studio</div>
+          <div>birat.studio</div>
           <div>Built with Next.js</div>
         </footer>
       </AnimateIn>
@@ -95,39 +80,51 @@ type Link = {
 
 const projectLinks: Link[] = [
   {
-    name: "oss.now",
-    url: "https://oss.now",
+    name: "Brainly",
+    url: "https://github.com/birat04/Brainly",
+    track: "brainly_github_clicked"
   },
   {
-    name: "Zero/0.email",
-    track: "zero_email_clicked",
-    url: "https://0.email",
+    name: "ZynkDrive",
+    url: "https://github.com/birat04/ZynkDrive",
+    track: "zynkdrive_github_clicked"
   },
   {
-    name: "ui.ahmet.studio",
-    url: "https://ui.ahmet.studio",
+    name: "InteliBridge",
+    url: "https://github.com/birat04/InteliBridge",
+    track: "intelibridge_github_clicked"
   },
+  {
+    name: "Subscription API",
+    url: "https://github.com/birat04/Subscription-tracking-api",
+    track: "subscription_api_github_clicked"
+  }
 ];
 
 const socialLinks: Link[] = [
   {
     name: "Portfolio",
-    url: "https://dub.sh/ahmet",
+    url: "https://birat.dev",
   },
   {
-    name: "GitHub",
-    url: "https://dub.sh/ahmetgh",
+    name: "github",
+    url: "https://github.com/birat04",
   },
   {
-    name: "X",
-    url: "https://dub.sh/ahmetx",
+    name: "x",
+    url: "https://x.com/BiratRoka",
+  },
+
+  {
+    name: "linkedin",
+    url: "https://www.linkedin.com/in/birat-roka-01a7481b2/",
   },
   {
-    name: "LinkedIn",
-    url: "https://dub.sh/ahmetli",
+    name: "email",
+    url: "mailto:rokabirat059@gmail.com",
   },
   {
-    name: "Instagram",
-    url: "https://dub.sh/ahmetig",
+    name: "instagram",
+    url: "https://www.instagram.com/birat.xyz/",
   },
 ];

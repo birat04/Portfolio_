@@ -16,7 +16,7 @@ import Vuejs from "@/components/icons/Vuejs";
 import Html from "@/components/icons/Html";
 import Css from "@/components/icons/Css";
 import Javascript from "@/components/icons/Javascript";
-import Trpc from "@/components/icons/Trpc";
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
 import { track } from "@vercel/analytics";
@@ -30,7 +30,7 @@ export default function Home() {
           <section className="mb-6">
             <AnimateIn variant="fadeUp" delay={0.2}>
               <h1 className="text-xl font-medium tracking-tight mb-4 flex items-baseline justify-between">
-                <span>Hey, I&apos;m Birat</span>
+                <span>Hey, I&apos;m Birat Roka</span>
                 <ThemeToggle />
               </h1>
             </AnimateIn>
@@ -295,10 +295,7 @@ const tools = {
     },
   ],
     backend_and_infrastructure: [
-    {
-      Logo: (props: React.SVGProps<SVGSVGElement>) => <Trpc {...props} />,
-      title: "TRPC",
-    },
+   
     {
       Logo: (props: React.SVGProps<SVGSVGElement>) => <Vercel className="fill-black dark:fill-white" {...props} />,
       title: "Vercel",
@@ -314,6 +311,10 @@ const tools = {
     {
       Logo: (props: React.SVGProps<SVGSVGElement>) => <Nodejs {...props} />,
       title: "NodeJS",
+    },
+    {
+      Logo: () => <div className="w-full h-full bg-gray-300 rounded flex items-center justify-center text-xs font-bold text-gray-600">EX</div>,
+      title: "ExpressJS",
     },
     {
       Logo: (props: React.SVGProps<SVGSVGElement>) => <Postgres {...props} />,

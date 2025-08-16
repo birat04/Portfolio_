@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Codepen from "./icons/Codepen";
 import Email from "./icons/Email";
@@ -27,6 +29,16 @@ const Icon: React.FC<IconProps> = ({ name, ...props }) => {
 };
 
 const SocialMedia: React.FC = () => {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) {
+    return <div className="flex flex-row gap-4" />; // Placeholder
+  }
+
   return (
     <div className="flex flex-row gap-4">
       {socialMedia.map((link) => (
